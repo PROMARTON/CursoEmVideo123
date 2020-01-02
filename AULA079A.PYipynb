@@ -1,0 +1,19 @@
+# https://youtu.be/LkAzRnc_GPk - Exercício 079 - Comentário aprimorado
+
+valores = list()
+resp = 'S'
+valor = 0
+while True:
+	valor=(int(input('Digite um valor: ')))
+	if valor not in valores:
+		valores.append(valor)
+		print('Valor adcionado com sucesso!')
+	else:
+		print('Valor repetido não é adcionado...')
+	resp = str(input('Continue? [S/N]')[0])
+	while resp not in 'SsNn':
+		resp = str(input('Tente novamente... [S/N]?')[0])
+	if resp in 'Nn':
+		break
+print(f'Voce adcionou os valores: {sorted(valores)}.')
+
